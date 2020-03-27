@@ -27,3 +27,18 @@ query {
 }
 ```
 
+## Partie server
+
+### Installation
+```
+npm install -g json-server
+```
+
+### Start
+```
+json-server --watch db.json
+```
+
+You can see the server home at **http://localhost:3000/**
+
+Sample request **http://localhost:3000/users?companyId=1**
