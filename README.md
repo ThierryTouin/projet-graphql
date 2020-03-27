@@ -77,6 +77,27 @@ fragment userDetails on User {
 }
 ```
 
+Ajout d'un utilisateur
+
+```
+mutation {
+  addUser(firstName:"toto",age:10,companyId:"3") {
+    id,
+    firstName
+  }
+}
+```
+
+Suppression d'un utilisateur
+
+```
+mutation {
+  deleteUser(id:"BwVOgNL") {
+    id
+  }
+}
+```
+
 ## Partie server
 
 ### Installation
