@@ -27,6 +27,7 @@ query {
 }
 ```
 
+Afficher le nom de la compagnie de l'utilisateur 2 en plus de son nom et de son age. Le nom de la compagnie vient d'une autre table
 ```
 query {
   user(id: "2"){
@@ -39,6 +40,42 @@ query {
 }
 ```
 
+Liste des utilisateurs de la compagnie 3
+```
+query {
+  company(id: "3"){
+    name,
+    user{
+      firstName
+    }
+  }
+}
+```
+
+Requête avec Alias et Fragment
+
+```
+query {
+  microsoftInfo : company(id: "3"){
+    name,
+    user{
+      ...userDetails
+    }
+  },
+  googleInfo : company(id: "2"){
+    name,
+    user{
+      ...userDetails
+    }
+  }
+}
+
+
+fragment userDetails on User {
+  firstName,
+  age
+}
+```
 
 ## Partie server
 
