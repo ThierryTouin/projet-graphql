@@ -18,5 +18,12 @@ query {
 }
 ```
 
-
+```
+query {
+  user(id: "1"){
+    firstName,
+    age
+  }
+}
+```
 
