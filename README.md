@@ -27,6 +27,19 @@ query {
 }
 ```
 
+```
+query {
+  user(id: "2"){
+    firstName,
+    age,
+    company {
+      name
+    }
+  }
+}
+```
+
+
 ## Partie server
 
 ### Installation
